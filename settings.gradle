@@ -1,2 +1,2 @@
 include ':app', ":lib_alibaba"
-rootProject.name = "alibabaDemo"
+rootProject.name = "AlibabaLibrary"
