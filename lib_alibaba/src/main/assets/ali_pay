@@ -1,0 +1,18 @@
+0.
+只能通过module的形式导入
+1.
+public void alipay(View view){
+    AliPayManager alipay = AliPayManager.getInstance();
+    alipay.setOnPayCallback(new IPayCallback() {
+        @Override
+        public void onSuccess(String s) {
+            Log.e(TAG, "" + s);
+        }
+
+        @Override
+        public void onError(String s) {
+            Log.e(TAG, "" + s);
+        }
+    });
+    alipay.pay(this, "alipay_sdk=alipay-sdk-java-4.7.12.ALL&app_id=2019043064380553&biz_content=%7B%22body%22%3A%22%E9%B1%BC%E7%BC%B8%E7%A7%9F%E8%B5%81%E6%94%AF%E4%BB%98%E8%AE%A2%E5%8D%95%22%2C%22out_trade_no%22%3A%221115288776%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22subject%22%3A%22%E9%B1%BC%E7%BC%B8%E7%A7%9F%E8%B5%81%E6%94%AF%E4%BB%98%E8%AE%A2%E5%8D%95%22%2C%22time_expire%22%3A%222020-05-29+11%3A25%22%2C%22total_amount%22%3A%223224.0%22%7D&charset=UTF-8&format=json&method=alipay.trade.app.pay&notify_url=http%3A%2F%2F47.96.78.243%2Fmall%2Fv1%2FfishTank%2FzfbPay&sign=Ej0P9s2xSbdMhXD365RvyiPrKYzq1YLAtnU36shN4%2FOjzn1%2FCTyQayyTHZ6Cvqo9W5RDmdyIGVlPsDnZsbT8H77Gx5NR7CCves%2FMREGs6idn2%2F0EW7dwjTsX8STqBoBcgCC9vHkXg6rs4FuEF6iWcIv8qmMbRM3V4%2FwhgHlhPpeu2AOlM2%2BTAxfC6oEDCWj5g2mC1r5JtuE5i4uUdvh8wO%2Ft%2BU4HHuZ0vogVIlBE1A%2FtZTrRhhvNIdtwdANuJzopRGn3HDAIfHkUbyFzHYj%2Faw1iB%2FzXKILIDq90miKlgXOsEpoxSyorqPsAlX37CF8ODTwgNs%2FmPdPTmG%2BDWZ%2B%2BaQ%3D%3D&sign_type=RSA2&timestamp=2020-05-29+11%3A10%3A21&version=1.0");
+}
